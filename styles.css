@@ -1,13 +1,12 @@
 :root {
     --red: #cc291f;
     --yellow: #ffd700;
-    --accent-color: #FFD700;
-    --text-color: #4A4A4A;
-    --light-bg: #F9FAFB;
-    --lightpink-bg: #fff0f5;
+    --black: #666;
+    --dark-red: #a01f18;
     --gradient-1: linear-gradient(135deg, #cc291f 0%, #a01f18 100%);
     --gradient-2: rgba(204, 41, 31, 0.8);
     --gradient-3: rgba(255, 215, 0, 0.3);
+    --light-grey: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     --white: #ffffff
 }
 html {
@@ -97,10 +96,8 @@ body {
     font-size: 0.9rem;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
 }
 
 .hamburger {
@@ -178,7 +175,7 @@ body {
 
 .btn-primary {
     background: var(--red);
-    color: var(--white);
+    color: white;
     border-color: var(--red);
 }
 
@@ -198,31 +195,10 @@ body {
 
 .btn-secondary:hover {
     background: white;
-    color: #cc291f;
+    color: var(--red);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
-
-.btn-tertiary {
-    background: var(--yellow);
-    color: var(--red);
-    border-color: var(--yellow);
-}
-
-.btn-tertiary:hover {
-    background: transparent;
-    color: var(--yellow);
-    border-color: var(--yellow);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--gradient-3);
-}
-  
-}
-.hero-image {
-    text-align: center;
-}
-
-
 
 .quick-links {
     padding: 80px 0;
@@ -233,7 +209,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #cc291f;
+    color: var(--red);
     margin-bottom: 3rem;
 }
 
@@ -264,34 +240,35 @@ body {
 }
 
 .link-card h3 {
-    color: #cc291f;
+    color: var(--red);
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .link-card p {
-    color: #666;
+    color: var(--black);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
 .card-link {
-    color: #cc291f;
+    color: var(--red);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .card-link:hover {
-    color: #a01f18;
+    color: var(--dark-red);
     transform: translateX(5px);
 }
 
 /* Intro Section */
 .intro {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: var(--light-grey);
 }
 
 .intro-content {
@@ -303,13 +280,13 @@ body {
 .intro-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #cc291f;
+    color: var(--red);
     margin-bottom: 2rem;
 }
 
 .intro-text {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--black);
     margin-bottom: 3rem;
     line-height: 1.8;
 }
@@ -332,19 +309,19 @@ body {
 .stat h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #cc291f;
+    color: var(--red);
     margin-bottom: 0.5rem;
 }
 
 .stat p {
-    color: #666;
+    color: var(--black);
     font-weight: 500;
 }
 
 /* QUESTION!! */
 .quest {
     padding: 60px 0;
-    background: linear-gradient(135deg, #cc291f 0%, #a01f18 100%);
+    background: linear-gradient(135deg, var(--red) 0%, #a01f18 100%);
     color: white;
     text-align: center;
 }
@@ -368,22 +345,45 @@ body {
     flex-wrap: wrap;
 }
 
-.btn-outline {
-    background: transparent;
-    color: white;
-    border-color: white;
+.btn-tertiary {
+    background: var(--yellow);
+    color: var(--red);
+    border-color: var(--yellow);
 }
 
-.btn-outline:hover {
-    background: white;
-    color: #cc291f;
+.btn-tertiary:hover {
+    background: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--gradient-3);
+}
+
+.quote {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fafafa 0%, #f2f2f2 100%);
+  text-align: center;
+}
+
+.quote blockquote {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--dark-red);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.quote cite {
+  font-size: 1rem;
+  color: var(--black);
+  opacity: 0.8;
 }
 
 /* Footer */
 .footer {
     background: #1a1a1a;
     color: white;
-    padding: 60px 0 20px;
+    padding: 50px 0 20px;
 }
 
 .footer-content {
@@ -395,7 +395,7 @@ body {
 
 .footer-section h3,
 .footer-section h4 {
-    color: #cc291f;
+    color: var(--red);
     margin-bottom: 1rem;
 }
 
@@ -414,7 +414,7 @@ body {
 }
 
 .footer-section ul li a:hover {
-    color: #cc291f;
+    color: var(--red);
 }
 
 .footer-bottom {
@@ -446,7 +446,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: #cc291f;
+        background: var(--red);
         width: 100%;
         text-align: center;
         transition: 0.3s;
